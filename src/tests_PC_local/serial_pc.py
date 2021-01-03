@@ -3,9 +3,7 @@ import time
 import atexit
 
 def request_arduino(request,timeout=1):
-    #for i in range(3):#Trata el reques cierta cantidad de veces
     arduino.write(bytes(request, 'utf-8'))
-    #Hacer un timeout
     _timeout = time.time() + timeout #sec(s) from now
     buff = ""
     while(True):
