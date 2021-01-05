@@ -1,13 +1,9 @@
-#https://pimylifeup.com/raspberry-pi-serial/
 import serial
 import time
-#http://arduino-er.blogspot.com/2015/04/python-auto-detect-arduino-connect.html
 import atexit
 
 def request_arduino(request,timeout=1):
-    #for i in range(3):#Trata el reques cierta cantidad de veces
     arduino.write(bytes(request, 'utf-8'))
-    #Hacer un timeout
     _timeout = time.time() + timeout #sec(s) from now
     buff = ""
     while(True):

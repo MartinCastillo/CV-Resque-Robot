@@ -1,7 +1,3 @@
-//https://forum.arduino.cc/index.php?topic=483350.0
-//////////////////////////////////// Global Variables /////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
-/////////////////Arrays sensores/////////////////
 //El indice 0 es el del sensor de la izquierda
 const int n_sensores = 5;
 int sensores[n_sensores] = {0, 1, 2, 3, 4};
@@ -22,7 +18,7 @@ const int AIA = 5;  // (pwm) pin A-IA Velocidad
 const int AIB = 6;  // (pwm) pin A-IB Direción
 const int BIA = 11; // (pwm) pin B-IA  Velocidad
 const int BIB = 10;  // (pwm)pin B-IB Dirección
-/////////////////Velocidades motores/////////////////
+
 int speed_Iz = 0;
 int speed_Ri = 0;
 int max_vel = 160;
@@ -30,7 +26,6 @@ int max_vel = 160;
 //valida diferentes partes del codigo según la necesidad, calibrar,
 //principal, testear, etc
 bool modo = 1;
-//Para girar con señales rojas y para los GAP
 bool girar_con_prox_negro = 0;
 int  last_action = 0;
 int direccion_giro_rojo;
@@ -47,8 +42,6 @@ const float distancia_90_grados = (pi*diameter * 90) / 360;
 volatile unsigned long encoder_count_R = 0;
 volatile unsigned long encoder_count_L = 0;
 const int pin_alimentacion_puente_h = 7;
-///////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////
 
 void setup() {
   //Setea los pines de los motores
@@ -71,8 +64,8 @@ void count_R() {
 void count_L() {
   encoder_count_L++;
 }
+
 //-----------------------------------------------------------
-/////////////////Void loop/////////////////
 void loop() {
   ///Recuerda que los arrays son listas de referencia por lo que no es necesario
   ///que estas funciones den retorno de forma explícita
