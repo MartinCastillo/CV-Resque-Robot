@@ -35,7 +35,7 @@ def find_value_mean_position(list,target_value):
             n_target_match += 1
     return(target_sum//n_target_match)
 
-if(__name__ == '__main__'):
+def fase1():
     cap = cv2.VideoCapture(0)
     while True:
         ret,frame = cap.read()
@@ -74,33 +74,29 @@ if(__name__ == '__main__'):
         print(line_pos)
 
         """Consulta ausenciade linea """
-        #Consultar si se llegó a la fase 2
-        #Si la mayoria de los cuadros son en negro, 3/4 o así
         if(find_full_color(line,white)):
             pass
 
         """Consulta Fase 2"""
         #Consultar si se llegó a la fase 2
-        #Si la mayoria de los cuadros son en negro, 3/4 o así
         if(find_full_color(line,black)):
-            pass
+            return 1
 
         """Encuentra rojos"""
-        """
-        #If red line is False, thre is no red square
+
+        #if red line is false, thre is no red square
         red_line = red_finder(color_line,min_red_pixels,)
         if(red_line):
             red_pos = find_value_mean_position(red_line,100)
-            #Chequea si la linea está a la derecha o a la izquierda
-            print("Rojo: {}".format(red_pos))
-            #if(red_pos > line_pos):#Derecha
-            else: # A la izquierda
-        """
-        #Imprime
+            #chequea si la linea está a la derecha o a la izquierda
+            print("rojo: {}".format(red_pos))
+            #if(red_pos > line_pos):#derecha
+            else: # a la izquierda
+
         cv2.imshow("frame",frame)
         cv2.imshow("threshold",threshold)
         k = cv2.waitKey(1)
         if (ord('k')==k):
             cv2.destroyAllWindows()
             break
-    pass
+    return 0

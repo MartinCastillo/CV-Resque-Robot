@@ -7,7 +7,7 @@ def request_arduino(request,timeout=1):
     _timeout = time.time() + timeout #sec(s) from now
     buff = ""
     while(True):
-        read = arduino.read().decode("utf-8") 
+        read = arduino.read().decode("utf-8")
         if(read):
             if(read=='\n'):
                 return buff

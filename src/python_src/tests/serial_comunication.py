@@ -1,8 +1,6 @@
-#https://pimylifeup.com/raspberry-pi-serial/
 import serial
 import atexit
 from time import sleep
-#for n in range(4):
 n = 0
 try:
     arduino = serial.Serial(

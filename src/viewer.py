@@ -1,4 +1,3 @@
-"""Un visualizador para el streaming por zmq"""
 import cv2
 import imagezmq
 import numpy as np

@@ -98,7 +98,7 @@ void loop() {
       int dir = buff.substring(indice_dir + 1).toInt();
       int dir_i = 1;
       int dir_d = 1;
-      
+
       switch (dir) {
         case -1:
           dir_i = -1; dir_d = 1;
@@ -113,7 +113,7 @@ void loop() {
           dir_i = -1; dir_d = -1;
           break;
       }
-      
+
       move_distance(distance, vel, dir_i, dir_d);
       //Serial.println(v_l);
       //Serial.println(v_r);

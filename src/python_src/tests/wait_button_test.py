@@ -13,8 +13,6 @@ GPIO.setup(button_pin, GPIO.IN,pull_up_down=GPIO.PUD_UP)
 GPIO.setup(green_led_pin, GPIO.OUT)
 GPIO.setup(red_led_pin, GPIO.OUT)
 
-#Stolen function to check if all the elements in the list are equal
-#https://thispointer.com/python-check-if-all-elements-in-a-list-are-same-or-matches-a-condition/
 check_all_equal = lambda x:(len(x) > 0 and all(elem == x[0] for elem in x))
 
 def stand_by()
