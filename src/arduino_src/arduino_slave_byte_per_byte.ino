@@ -143,7 +143,6 @@ void mover_servo_pausado(Servo servo, int angle, int delay_paso) {
   }
 }
 
-//https://www.bananarobotics.com/shop/How-to-use-the-HG7881-(L9110)-Dual-Channel-Motor-Driver-Module
 void move_distance(float distance, int vel, int dir_i, int dir_d) {
   //dir_i y dir_d es la dirección de cada rueda, si es 1 es adelante, -1 atras, solo usa el encoder izquierdo
   encoder_i_count = 0;
