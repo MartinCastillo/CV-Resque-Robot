@@ -1,5 +1,5 @@
 # CV-Resque-Robot
-Robot hecho con mi equipo del club de robótica de la fundación mustakis para la competencia de robótica de la UTFSM.
+Robot hecho con mi equipo del club de robótica de la fundación mustakis para la competencia de robótica de la UTFSM.<br>
 En fase 2 detecta supervivientes (pelotas) y las tiene que llevar a la "zona segura".
 <br><hr>
 <h1>Fotos</h1>
